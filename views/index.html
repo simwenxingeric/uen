@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>UEN Validator</title>
-        <link rel='stylesheet' href='./css/semantic.min.css'></script>
+        <link rel='stylesheet' href='./css/semantic.min.css'/>
     </head>
     <body>
         <div class="ui container"></div>
@@ -14,15 +14,16 @@
                         <br>
                         <div class="inline field">
                             <input type="text" id="uen" name="uen" placeholder="S98LP1211C">
-                            <div class="ui left pointing label" id="uen-validation">Please enter a UEN</div>
+                            <div class="ui left pointing label" id="uen-validation" name="uen-validation">Please enter a UEN</div>
                         </div>
                         <br>
-                        <button class="ui blue button" id="submit" name="submit">Validate</button>
+                        <button class="ui blue button" id="validate" name="validate">Validate</button>
+                        <button class="ui red button" id="clear" name="clear">Clear</button>
                     </form>
                 </div>
             </div>
         </div>
     </body>
     <script src='./js/jquery-3.6.0.min.js'></script>
-    <script src='./js/checkuen.js'></script>
+    <script src='./js/check-uen.js'></script>
 </html>

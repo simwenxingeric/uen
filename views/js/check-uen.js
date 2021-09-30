@@ -19,10 +19,27 @@ $(function(){
         }
     }
 
-    $("#submit").click((event) => {
+    $("#validate").click((event) => {
         event.preventDefault();
         let uen = $('#uen').val()
         let validate = uencheck(uen)
-        $('#uen-validation').html(`${validate}`);
+        $('#uen-validation').html(`${validate}`)
+        $("#uen-validation").show()
+    })
+
+    $("#clear").click((event) => {
+        event.preventDefault();
+        $('#uen').val('');
+        $("#uen-validation").html("Please enter a UEN")
+    })
+
+    $("input[name='uen']").change((event) => {
+        event.preventDefault();
+        if ($('#uen').val() == '') {
+            $("#uen-validation").html("Please enter a UEN")
+            $("#uen-validation").show()
+        } else {
+            $("#uen-validation").hide()
+        }
     })
 })
