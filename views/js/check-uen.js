@@ -31,6 +31,7 @@ $(function(){
         event.preventDefault();
         $('#uen').val('');
         $("#uen-validation").html("Please enter a UEN")
+        $("#uen-validation").show()
     })
 
     $("input[name='uen']").change((event) => {
