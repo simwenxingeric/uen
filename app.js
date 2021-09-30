@@ -3,7 +3,7 @@ const views = require('./controller/views.js')
 
 const app = express()
 
-const port = 5000
+const port = 3000 || process.env.PORT
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
